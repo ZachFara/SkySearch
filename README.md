@@ -3,8 +3,7 @@
   <img alt="SkySearch Logo" src="media/images/SkySearch_Logos/SkySearchLogo5_WithText.png">
 </picture>
 
--------------
-# SkySearch: Missing Person Identification Using Aerial Drone Sensing
+# SkySearch: Generalized Object Search Using UAVs and Multimodal LLMs
 UChicago Robotics Capstone December 2024
 
 
@@ -15,34 +14,37 @@ UChicago Robotics Capstone December 2024
 | Meta | [License - MIT](https://github.com/DonutsDuncan/SkySearch_UAV/blob/main/LICENSE)|
 
 ## What is it?
+**SkySearch** is a groundbreaking research project that leverages multimodal large language models (MLLMs) to enable drones to autonomously perform open-vocabulary search tasks. Unlike traditional object detection systems constrained by fixed class labels and requiring retraining for new objects, SkySearch empowers drones to locate targets using natural language descriptions or reference images—without additional model fine-tuning.
 
-**SkySearch** is an open source Python package that allows simple, flexible, and robust DJI drone swarm capabilities tailored for search and rescue. Specifically, it provides a command center UI layer, flight controls, AI modeling extensibility, and speech-to-text for drone commands. SkySearch allows emergency personnel to search based on a single photo of a lost person as well as a textual description. This project was initialized as part of the University of Chicago's M.S. in Applied Data Science Capstone 2024.
+For example, during a test flight, SkySearch successfully identified the book *Cracking the Coding Interview* when given the target description: "something that can help me with an interview at Meta." By integrating advanced vision-language models like GPT-4o, Gemini 1.5, and Claude 3, SkySearch enables drones to reason about their environment, adapt to dynamic conditions, and identify novel objects in real time. This innovation represents a significant step forward in autonomous UAV capabilities, combining reasoning, adaptability, and precision.
 
 ## Table of Contents
 
 - [Main Features](#main-features)
-- [Where to get it](#where-to-get-it)
+- [Powerpoint Presentation](#powerpoint-presentation)
+- [ArXiv Paper Link](#arxiv-paper-link)
+- [MS in Applied Data Science Conference Presentation](#ms-in-applied-data-science-conference-presentation)
 - [License](#license)
-- [Documentation and User Guide](#documentation)
 
 ## Main Features
 
-* <ins>Ground Control Station (GCS)</ins>: The GCS serves as the central hub for mission planning, monitoring, and flight control. It includes a user-friendly interface for defining search areas, setting flight parameters, and receiving real-time updates from the drone swarm.
-* <ins>Drone Swarm</ins>: The swarm comprises of multiple UAVs equipped with high-resolution cameras, GPS, and onboard processing units. The drones communicate with each other and the GCS to coordinate their search patterns and share information.
-* <ins>Image Recognition/Text-to-Image Matching</ins>: This module is responsible for generating images based on a textual description of the missing person or accepting uploaded photos. The module then compares these reference images against the real-time drone video feeds. Advanced computer vision techniques, such as convolutional neural networks (CNNs), YOLO, and FaceNet are employed for face detection and recognition. 
+- **Open Vocabulary Search**:  
+  SkySearch leverages state-of-the-art multimodal large language models to enable drones to perform open-vocabulary searches. This means drones can identify and locate objects based on natural language descriptions or reference images, without being limited to predefined categories or requiring retraining.  
+- **Reasoning Based Searches**:  
+  SkySearch integrates advanced reasoning capabilities, allowing drones to interpret complex natural language queries and adapt their search strategies dynamically. This feature enables drones to perform tasks such as identifying objects based on abstract descriptions, contextual clues, or even ambiguous instructions, enhancing their utility in real-world scenarios.
+- **Custom GLAD Dataset**:
+  Due to benchmark data contamination and the fact that we are using an LLM to find images within a grid pattern from our drone's camera, we specially made a new labeled dataset for this purpose. We call it GLAD (Grid Labeling Approximation Dataset). Within this repo, we demonstrate how we tested multiple LLMs over GLAD so we could figure out which one was the best to utilize in our drone's official test flights.
 
-## Where to get it
+## Powerpoint Presentation
 
-Check back soon! SkySearch will be made available via PyPI and Streamlit Cloud in the next few months.
+## ArXiv Paper Link
+
+## MS in Applied Data Science Conference Presentation
+
+SkySearch was presented as part of the MS in Applied Data Science Conference, where it was awarded **1st place** in it's group for its innovative approach to autonomous UAV search and identification. The presentation highlighted the project's groundbreaking use of multimodal large language models and its potential real-world applications.
+
+You can watch the full presentation video [here](https://example.com/conference-presentation-video).
 
 ## License
 
 SkySearch is published under the [MIT License](https://github.com/DonutsDuncan/SkySearch_UAV/blob/main/LICENSE)
-
-## Documentation
-
-The SkySearch UI is meant to be a simple and intutitve experience for users of all skill levels. 
-* Users can cycle through the various drone swarm functions via the Settings menu on the left.
-* To connect a drone, please follow the steps outlined in the Drone on Private python file
-
-
