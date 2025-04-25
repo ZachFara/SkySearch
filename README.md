@@ -20,9 +20,11 @@ For example, during a test flight, SkySearch successfully identified the book *C
 
 ## Table of Contents
 
+- [What is it?](#what-is-it)
 - [Main Features](#main-features)
-- [Powerpoint Presentation](#powerpoint-presentation)
+- [Repository Structure](#repository-structure)
 - [ArXiv Paper Link](#arxiv-paper-link)
+- [PowerPoint Presentation](#powerpoint-presentation)
 - [MS in Applied Data Science Conference Presentation](#ms-in-applied-data-science-conference-presentation)
 - [License](#license)
 
@@ -35,9 +37,36 @@ For example, during a test flight, SkySearch successfully identified the book *C
 - **Custom GLAD Dataset**:
   Due to benchmark data contamination and the fact that we are using an LLM to find images within a grid pattern from our drone's camera, we specially made a new labeled dataset for this purpose. We call it GLAD (Grid Labeling Approximation Dataset). Within this repo, we demonstrate how we tested multiple LLMs over GLAD so we could figure out which one was the best to utilize in our drone's official test flights.
 
-## Powerpoint Presentation
+## Repository Structure
+
+The SkySearch repository is organized for modular development, separating drone control logic, vision model utilities, and evaluation datasets. Below is a summary of the major folders and files:
+
+SkySearch/
+├── media/images/                      # Project images, logos, and visual assets
+├── parameters/                        # Prompt templates and model configuration files
+├── setup/                             # Environment and dependency setup scripts
+├── src/                               # Main SkySearch application code
+│   ├── main.py                        # Entrypoint to run the SkySearch mission
+│   ├── LLM.py                         # Shared functions for MLLM integration
+│   ├── GeminiLLM.py                   # Gemini-specific model logic
+│   └── UAV.py                         # Drone control interface for UAVs like Tello
+├── tests/                             # Unit and integration tests
+│   ├── uav_test.py                    # Tests for drone command module
+│   └── llm_test.py                    # Tests for LLM query/response behavior
+├── requirements.txt                   # Python dependencies
+├── pyproject.toml / setup.cfg         # Packaging and installation metadata
+├── README.md                          # Project overview and instructions
+└── .gitignore / .dockerignore         # Ignore rules for Git and Docker
 
 ## ArXiv Paper Link
+
+We are in the process of preparing our research paper for submission to arXiv. Once published, the link to the paper will be updated here. Stay tuned for more details!
+
+## Powerpoint Presentation 
+
+We created a detailed PowerPoint presentation to showcase the SkySearch project, including its objectives, methodology, and results. The presentation covers the technical aspects of integrating multimodal large language models with UAVs, as well as the challenges and solutions encountered during development.
+
+You can download the PowerPoint presentation [here](https://example.com/skysearch-presentation).
 
 ## MS in Applied Data Science Conference Presentation
 
