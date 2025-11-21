@@ -70,6 +70,8 @@ We created a detailed PowerPoint presentation to showcase the SkySearch project,
 
 You can download the PowerPoint presentation [here](https://example.com/skysearch-presentation).
 
+You can read the UChicago Robotics Capstone report (PDF) [here](media/ADSP_34002_UChicago_Robotic_Capstone_SkySearch.pdf).
+
 ## MS in Applied Data Science Conference Presentation
 
 SkySearch was presented as part of the MS in Applied Data Science Conference, where it was awarded **1st place** in it's group for its innovative approach to autonomous UAV search and identification. The presentation highlighted the project's groundbreaking use of multimodal large language models and its potential real-world applications.
