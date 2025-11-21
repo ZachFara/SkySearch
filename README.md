@@ -7,11 +7,11 @@
 UChicago Robotics Capstone December 2024
 
 
-|||
+| Item | Details |
 | --- | --- |
-| Authors | Duncan Calvert, Joon Park, Zach Farahany, Mohammad Ayan Raheel|
-| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/pandas.svg)](https://pypi.org)|
-| Meta | [License - MIT](https://github.com/DonutsDuncan/SkySearch_UAV/blob/main/LICENSE)|
+| Authors | Duncan Calvert, Joon Park, Zach Farahany, Mohammad Ayan Raheel |
+| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/pandas.svg)](https://pypi.org) |
+| Meta | [License - MIT](https://github.com/DonutsDuncan/SkySearch_UAV/blob/main/LICENSE) |
 
 ## What is it?
 **SkySearch** is a groundbreaking research project that leverages multimodal large language models (MLLMs) to enable drones to autonomously perform open-vocabulary search tasks. Unlike traditional object detection systems constrained by fixed class labels and requiring retraining for new objects, SkySearch empowers drones to locate targets using natural language descriptions or reference images—without additional model fine-tuning.
@@ -41,6 +41,7 @@ For example, during a test flight, SkySearch successfully identified the book *C
 
 The SkySearch repository is organized for modular development, separating drone control logic, vision model utilities, and evaluation datasets. Below is a summary of the major folders and files:
 
+```text
 SkySearch/
 ├── media/images/                      # Project images, logos, and visual assets
 ├── parameters/                        # Prompt templates and model configuration files
@@ -57,6 +58,7 @@ SkySearch/
 ├── pyproject.toml / setup.cfg         # Packaging and installation metadata
 ├── README.md                          # Project overview and instructions
 └── .gitignore / .dockerignore         # Ignore rules for Git and Docker
+```
 
 ## ArXiv Paper Link
 
